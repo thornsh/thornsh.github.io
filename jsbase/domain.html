@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>作用域 | documentation</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="my knowledge and documentation">
+    
+    <link rel="preload" href="/assets/css/0.styles.ac52e467.css" as="style"><link rel="preload" href="/assets/js/app.74e169ec.js" as="script"><link rel="preload" href="/assets/js/2.d67b6f28.js" as="script"><link rel="preload" href="/assets/js/18.f1a6b0ea.js" as="script"><link rel="prefetch" href="/assets/js/10.ecd78cb5.js"><link rel="prefetch" href="/assets/js/11.db1971a4.js"><link rel="prefetch" href="/assets/js/12.9b3280c1.js"><link rel="prefetch" href="/assets/js/13.c63ba1d8.js"><link rel="prefetch" href="/assets/js/14.108d82e9.js"><link rel="prefetch" href="/assets/js/15.3b15fed5.js"><link rel="prefetch" href="/assets/js/16.48090174.js"><link rel="prefetch" href="/assets/js/17.423a9eed.js"><link rel="prefetch" href="/assets/js/19.b48bb8ab.js"><link rel="prefetch" href="/assets/js/20.731cc6f5.js"><link rel="prefetch" href="/assets/js/21.8e942096.js"><link rel="prefetch" href="/assets/js/22.5dd62b5e.js"><link rel="prefetch" href="/assets/js/23.1e489d8e.js"><link rel="prefetch" href="/assets/js/24.03d2fdb9.js"><link rel="prefetch" href="/assets/js/25.3e6f2e33.js"><link rel="prefetch" href="/assets/js/26.20fed405.js"><link rel="prefetch" href="/assets/js/27.ee613fd4.js"><link rel="prefetch" href="/assets/js/28.a6301ce0.js"><link rel="prefetch" href="/assets/js/29.4e342b06.js"><link rel="prefetch" href="/assets/js/3.11093c50.js"><link rel="prefetch" href="/assets/js/30.4f910bea.js"><link rel="prefetch" href="/assets/js/31.449f92d6.js"><link rel="prefetch" href="/assets/js/32.7661398f.js"><link rel="prefetch" href="/assets/js/33.ee7303b1.js"><link rel="prefetch" href="/assets/js/34.6a81561b.js"><link rel="prefetch" href="/assets/js/4.c653c01d.js"><link rel="prefetch" href="/assets/js/5.c61a149b.js"><link rel="prefetch" href="/assets/js/6.88fcbd97.js"><link rel="prefetch" href="/assets/js/7.b1352a52.js"><link rel="prefetch" href="/assets/js/8.3d88b0c5.js"><link rel="prefetch" href="/assets/js/9.077134b4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ac52e467.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="documentation" class="logo"> <span class="site-name can-hide">documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/jsbase/" class="nav-link">
+  js基础
+</a></div><div class="nav-item"><a href="/vue-knowledge/" class="nav-link">
+  vue知识
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  css
+</a></div><div class="nav-item"><a href="/vs-code/" class="nav-link">
+  vscode
+</a></div><div class="nav-item"><a href="/tools/" class="nav-link">
+  tools
+</a></div><div class="nav-item"><a href="/network/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li><li class="dropdown-item"><h4>
+          Group1
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Group2
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/jsbase/" class="nav-link">
+  js基础
+</a></div><div class="nav-item"><a href="/vue-knowledge/" class="nav-link">
+  vue知识
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  css
+</a></div><div class="nav-item"><a href="/vs-code/" class="nav-link">
+  vscode
+</a></div><div class="nav-item"><a href="/tools/" class="nav-link">
+  tools
+</a></div><div class="nav-item"><a href="/network/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li><li class="dropdown-item"><h4>
+          Group1
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Group2
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/jsBase/" aria-current="page" class="sidebar-link">js基础知识</a></li><li><a href="/jsBase/compilation-principle.html" class="sidebar-link">编译原理</a></li><li><a href="/jsBase/domain.html" aria-current="page" class="active sidebar-link">作用域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jsBase/domain.html#函数作用域" class="sidebar-link">函数作用域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jsBase/domain.html#匿名函数表达式" class="sidebar-link">匿名函数表达式</a></li></ul></li><li class="sidebar-sub-header"><a href="/jsBase/domain.html#闭包" class="sidebar-link">闭包</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jsBase/domain.html#闭包常见例子" class="sidebar-link">闭包常见例子</a></li></ul></li></ul></li><li><a href="/jsBase/array.html" class="sidebar-link">数组</a></li><li><a href="/jsBase/object.html" class="sidebar-link">对象</a></li><li><a href="/jsBase/dom.html" class="sidebar-link">DOM</a></li><li><a href="/jsBase/event.html" class="sidebar-link">事件</a></li><li><a href="/jsBase/prototype.html" class="sidebar-link">原型</a></li><li><a href="/jsBase/promise.html" class="sidebar-link">Promise</a></li><li><a href="/jsBase/generation.html" class="sidebar-link">生成器</a></li><li><a href="/jsBase/web-worker.html" class="sidebar-link">web worker</a></li><li><a href="/jsBase/blob.html" class="sidebar-link">blob</a></li><li><a href="/jsBase/tips.html" class="sidebar-link">tips</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="函数作用域"><a href="#函数作用域" class="header-anchor">#</a> 函数作用域</h2> <p>在任意代码片段外部添加包装函数，可以将内部的变量和函数定义隐藏起来，外部作用域无法访问包装函数内部的任何内容。</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>但这并不理想，会导致额外的问题<br>
+函数名称本身污染了所在的作用域，而且必须显示的通过函数名调用这个函数才能运行其中的代码</p></div> <h4 id="解决方案"><a href="#解决方案" class="header-anchor">#</a> 解决方案</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>通过小括号包裹 function， 函数会被当做<strong>函数表达式</strong>而不是一个标准的函数声明</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>区分函数声明和表达式最简单的方法是看 function 关键字出现在声明中的位置（不仅仅是一行代码，而是整个声明中的位置）。如果 function 是声明中的第一个词，那么就是一个函数声明，否则就是函数表达式。</p></div> <h4 id="思考"><a href="#思考" class="header-anchor">#</a> 思考</h4> <p>其他的 function 是函数声明还是表达式？比如 settimeout(function())等</p> <h3 id="匿名函数表达式"><a href="#匿名函数表达式" class="header-anchor">#</a> 匿名函数表达式</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;aaa&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>因为 function()...没有名称标识符，所以为匿名函数表达式。函数表达式可以不声明函数名，但是函数声明不能省略函数名</p></div> <h4 id="缺陷"><a href="#缺陷" class="header-anchor">#</a> 缺陷</h4> <blockquote><ol><li>匿名函数在栈追踪中不会显示出有意义的函数名，使得调试很困难。</li> <li>如果没有函数名，当函数需要引用自身时只能使用已经过期的 arguments.callee 引用， 比如在递归中。另一个函数需要引用自身的例子，是在事件触发后事件监听器需要解绑自身。</li> <li>匿名函数省略了对于代码可读性 / 可理解性很重要的函数名。一个描述性的名称可以让代码不言自明。</li></ol></blockquote> <h4 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h4> <p>使用行内函数表达式</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">timeoutHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;aaa&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="闭包"><a href="#闭包" class="header-anchor">#</a> 闭包</h2> <div class="language-js line-numbers-mode"><div class="highlight-lines"><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br></div><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> baz <span class="token operator">=</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">baz</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>第八行 foo()执行后，引擎会通过垃圾回收来释放不再使用的内存空间。但是，由于闭包，函数 foo 的内部作用域依然存在，因此不会被回收。因为 bar()本身在使用这个内部作用域。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>bar()依然持有对该作用域的引用，而这个引用就叫闭包</p></div> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上述代码严格来讲不算闭包。因为函数 bar 对 a 的引用是定义函数 bar 的当前词法作用域中 LHS 查询的结果。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token constant">IIFE</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>虽然这段代码可以正常工作，但严格来讲它并不是闭包。为什么？因为函数（示例代码中
+的 IIFE）并不是在它本身的词法作用域以外执行的。它在定义时所在的作用域中执行（而
+外部作用域，也就是全局作用域也持有 a）。a 是通过普通的词法作用域查找而非闭包被发
+现的。</p></div> <h3 id="闭包常见例子"><a href="#闭包常见例子" class="header-anchor">#</a> 闭包常见例子</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token operator">*</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 6</span>
+<span class="token comment">// 6</span>
+<span class="token comment">// 6</span>
+<span class="token comment">// 6</span>
+<span class="token comment">// 6</span>
+<span class="token comment">// 6</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>因为延迟函数的回调会在循环结束时才执行。此例中，timer 函数分别在全局作用域中定义了 5 次，共享同一个变量 i</p></div> <h4 id="解决方法"><a href="#解决方法" class="header-anchor">#</a> 解决方法</h4> <p>创建闭包，for 循环时，为每个迭代创建一个闭包作用域，用来存储每次迭代所需要的 i 值</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">j</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token operator">*</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="方法改进"><a href="#方法改进" class="header-anchor">#</a> 方法改进</h4> <p>上述方法是在每次迭代时创建一个新的作用域，用于保存每次迭代需要的 i 值，由此可以想到可以用 let 的块级作用域代替。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>使用 let，本质上是将一个块转换成一个可以关闭的作用域</p></div> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> j <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> i <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>for 循环头部的 let 声明还会有一 个特殊的行为。这个行为指出变量在循环过程中不止被声明一次，每次迭代都会声明。随后的每个迭代都会使用上一个迭代结束时的值来初始化这个变量。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/jsBase/compilation-principle.html" class="prev">
+        编译原理
+      </a></span> <span class="next"><a href="/jsBase/array.html">
+        数组
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.74e169ec.js" defer></script><script src="/assets/js/2.d67b6f28.js" defer></script><script src="/assets/js/18.f1a6b0ea.js" defer></script>
+  </body>
+</html>
